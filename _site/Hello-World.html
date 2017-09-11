@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>Hello, World!</title>
+  <meta name="description" content="A minimal, responsive, ready to use blog template, built with Jekyll.">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/about" title="About Monochrome">About Monochrome</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://github.com/thereviewindex/monochrome/archive/master.zip">Download</a>
+<a href="https://github.com/thereviewindex/monochrome">Project on Github</a>
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/">
+        <h1>
+          <span>mono</span>chrome
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+	    
+	      
+	    
+	      
+	        <a href="/about" title="About Monochrome">About Monochrome</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+      <!-- Nav links -->
+	    <a href="https://github.com/thereviewindex/monochrome/archive/master.zip">Download</a>
+<a href="https://github.com/thereviewindex/monochrome">Project on Github</a>
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>Hello, World!</h2>		
+	<time datetime="2016-06-15T09:11:47-07:00" class="by-line">15 Jun 2016</time>
+	<div class="content">
+
+		<p>Most programming blogs feature posts from veteran programmers teaching others new concepts and techniques. However, I am a beginning programmer and I plan to blog about the things I’m learning and the difficulties I’m having. Hopefully I can help other beginning programmers, but more importantly I hope people will get involved and teach me to code!</p>
+
+<h2 id="why-i-chose-to-use-hexo">Why I Chose To Use Hexo</h2>
+
+<p>Over the years, I’ve experimented with many different ways to manage a blog. My very first website, handcoded in HTML in the late ’90s had a “news” section which was basically a primitive blog. After a lot of dabbling, I decided to use the <a href="http://hexo.io">Hexo</a> static website framework to manage this blog. The primary factors in my decision to use Hexo were:</p>
+
+<h3 id="it-uses-markdown">It uses markdown.</h3>
+
+<p>This could be a whole other future post about why rich-text and <a href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a> editors are evil. Ever since I discovered the <a href="https://github.com/TryGhost/Ghost">Ghost</a> CMS, I’ve been excited about blogging in <a href="http://daringfireball.net/projects/markdown/syntax#philosophy">markdown</a>. I do almost all of my writing in markdown anyway, so I wanted a system that uses it. With Hexo, blog posts are essentially markdown notes with frontmatter.</p>
+
+<h3 id="it-generates-static-websites">It generates static websites.</h3>
+
+<p>This means it can be managed locally offline and then published to a remote server using Git. Using tools that are available offline is important to me, as there are still many situations where I might want to work without internet access.</p>
+
+<p>Another advantage of generating static pages is that the site can be hosted for free on <a href="https://pages.github.com">GitHub Pages</a>. This means I don’t have a manage a server and I can focus instead on what’s most important, <em>the content</em>.</p>
+
+<h3 id="its-open-source-and-only-depends-on-nodejs--git">It’s open-source and only depends on Node.js &amp; Git.</h3>
+
+<p>In order to use Jekyll, I had to install and configure Ruby, which isn’t a part of normal workflow. The only dependencies Hexo requires are Node.js &amp; Git (I’m actually using a lot of other open-source projects for this blog, but they’re all managed with npm). I already use Node.js, so getting Hexo up &amp; running was as simple as executing:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>npm install -g hexo-cli
+<span class="gp">$ </span>hexo init project-name
+<span class="gp">$ </span><span class="nb">cd </span>project-name
+<span class="gp">$ </span>npm install
+<span class="gp">$ </span>hexo serve
+</code></pre>
+</div>
+
+<p>On a more philosophical note, as much as possible I try to use open-source software, and since I am currently focusing on JavaScript, I really wanted to use a tool that was written in JavaScript so that I could understand how it works and possibly even extend it down the line.</p>
+
+<h3 id="teach-me-to-code">Teach Me To Code</h3>
+
+<p>What do you think about my criteria? Is there a better choice I could have made? And any other questions or comments, hit me up on social media.</p>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>&copy;2017 - Christopher Fujino</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

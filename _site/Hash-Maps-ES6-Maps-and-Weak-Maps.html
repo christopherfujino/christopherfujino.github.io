@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>ES6 Maps, Weak Maps, and the Determinism of the JavaScript Garbage Collector</title>
+  <meta name="description" content="A minimal, responsive, ready to use blog template, built with Jekyll.">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/about" title="About Monochrome">About Monochrome</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://github.com/thereviewindex/monochrome/archive/master.zip">Download</a>
+<a href="https://github.com/thereviewindex/monochrome">Project on Github</a>
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/">
+        <h1>
+          <span>mono</span>chrome
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+	    
+	      
+	    
+	      
+	        <a href="/about" title="About Monochrome">About Monochrome</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+      <!-- Nav links -->
+	    <a href="https://github.com/thereviewindex/monochrome/archive/master.zip">Download</a>
+<a href="https://github.com/thereviewindex/monochrome">Project on Github</a>
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>ES6 Maps, Weak Maps, and the Determinism of the JavaScript Garbage Collector</h2>		
+	<time datetime="2016-07-09T11:13:42-07:00" class="by-line">09 Jul 2016</time>
+	<div class="content">
+
+		<p>Let’s say you have an app with a number of objects, and you’d like to store metadata about certain objects. How would you do this? What I’ve been doing is creating a special object for the purpose, like so:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="p">{</span> <span class="na">uniqueIdentifier</span> <span class="p">:</span> <span class="s2">"this is my first object"</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="p">{</span> <span class="na">uniqueIdentifier</span> <span class="p">:</span> <span class="s2">"this is my second object"</span> <span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">registry</span> <span class="o">=</span> <span class="p">{};</span>
+
+<span class="nx">registry</span><span class="p">[</span><span class="nx">x</span><span class="p">.</span><span class="nx">uniqueIdentifier</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'this object is okay'</span><span class="p">;</span>
+<span class="nx">registry</span><span class="p">[</span><span class="nx">y</span><span class="p">.</span><span class="nx">uniqueIdentifier</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'but this object is my favorite!'</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">registry</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="s1">': '</span> <span class="o">+</span> <span class="nx">registry</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Here we have two objects, <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code>, which we’d like to keep metadata about in a variable called <code class="highlighter-rouge">registry</code>. We use as the key for each entry in our registry the object in question’s “uniqueIdentifier” property. Now, at any later time, if we’d like to access the metadata about an object, all we need to know is the value of the object’s “uniqueIdentifier” property.</p>
+
+<p>Restrictions for this method are:</p>
+
+<ol>
+  <li>Every object that will be stored in the registry should have a common property with the same key name, here called “uniqueIdentifier”.</li>
+  <li>Each object must have a unique value to this property, or else registry entries will get overwritten.</li>
+  <li>The value to this property must be a string, because the key names for our registry object must be strings.</li>
+</ol>
+
+<p>A workaround for the last two would be creating a hashing function, but this must be deterministic (i.e. it must be repeatable, or else we would not be able to consistently look up this value in the future). Somehow the values of each object to be tracked in the registry must be unique.</p>
+
+<p>An example of restriction 2 is as follows:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="p">{</span> <span class="na">firstName</span> <span class="p">:</span> <span class="s1">'Michael'</span><span class="p">,</span> <span class="na">lastName</span> <span class="p">:</span> <span class="s1">'Jordan'</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="p">{</span> <span class="na">firstName</span> <span class="p">:</span> <span class="s1">'Michael'</span><span class="p">,</span> <span class="na">lastName</span> <span class="p">:</span> <span class="s1">'Jackson'</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">z</span> <span class="o">=</span> <span class="p">{</span> <span class="na">firstName</span> <span class="p">:</span> <span class="s1">'Andrew'</span><span class="p">,</span> <span class="na">lastName</span> <span class="p">:</span> <span class="s1">'Jackson'</span> <span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">registry</span> <span class="o">=</span> <span class="p">{};</span>
+
+<span class="nx">registry</span><span class="p">[</span><span class="nx">x</span><span class="p">.</span><span class="nx">firstName</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'a basketball player'</span><span class="p">;</span>
+<span class="nx">registry</span><span class="p">[</span><span class="nx">y</span><span class="p">.</span><span class="nx">firstName</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'a musician'</span><span class="p">;</span>
+<span class="nx">registry</span><span class="p">[</span><span class="nx">z</span><span class="p">.</span><span class="nx">firstName</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'a US president'</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="s1">' '</span> <span class="o">+</span> <span class="nx">x</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">+</span> <span class="s1">' was '</span> <span class="o">+</span> <span class="nx">registry</span><span class="p">.</span><span class="nx">x</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="s1">'.'</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>Here the metadata for Michael Jordan been overwritten by that for Michael Jackson because we used <code class="highlighter-rouge">firstName</code> as our registry key. Here we would have the same problem if we used <code class="highlighter-rouge">lastName</code>, because it is not universally unique either. In this example we could create unique identifiers by concatenating the first and last names, but there might be objects where these are the same too, and this would be more of a bandage on the problem than an true solution.</p>
+
+<p>This is essentially JavaScript’s makeshift equivalent of a <a href="https://en.wikipedia.org/wiki/Hash_table">hash map</a>.</p>
+
+<h2 id="es2015-maps">ES2015 Maps</h2>
+
+<p>With ES2015, we now have a new native, built-in object for handling these kinds of maps, unsurprisingly called <code class="highlighter-rouge">Map</code>. Here’s our previous example, re-written using an ES2015 map:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="p">{</span> <span class="na">firstName</span> <span class="p">:</span> <span class="s1">'Michael'</span><span class="p">,</span> <span class="na">lastName</span> <span class="p">:</span> <span class="s1">'Jordan'</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="p">{</span> <span class="na">firstName</span> <span class="p">:</span> <span class="s1">'Michael'</span><span class="p">,</span> <span class="na">lastName</span> <span class="p">:</span> <span class="s1">'Jackson'</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">z</span> <span class="o">=</span> <span class="p">{</span> <span class="na">firstName</span> <span class="p">:</span> <span class="s1">'Andrew'</span><span class="p">,</span> <span class="na">lastName</span> <span class="p">:</span> <span class="s1">'Jackson'</span> <span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">registry</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span>
+
+<span class="nx">registry</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="s1">'a basketball player'</span><span class="p">);</span>
+<span class="nx">registry</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">y</span><span class="p">,</span> <span class="s1">'a musician'</span><span class="p">);</span>
+<span class="nx">registry</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">z</span><span class="p">,</span> <span class="s1">'a US president'</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="s1">' '</span> <span class="o">+</span> <span class="nx">x</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">+</span> <span class="s1">' was '</span> <span class="o">+</span> <span class="nx">registry</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'.'</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>Here we called the native <code class="highlighter-rouge">Map</code> object’s constructor to create our registry (we could have initialized our registry by passing an array of arrays of key-value pairs to the constructor, but this method is more directly analogous to our previous example). The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set">Map.prototype.set() method</a> takes a key-value pair as its arguments. And—as you can see from our example—map keys don’t have to be strings, they can be any valid JavaScript type, including objects (technically a reference to the object). So rather than having to use some unique identifier to specify each object in our registry, we can use a reference to the object itself as the key. This essentially removes our previous 3 restrictions.</p>
+
+<p>A neat bonus of this is that we can separately track objects that have the exact same values. For example:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="p">{</span> <span class="na">firstName</span> <span class="p">:</span> <span class="s1">'Chris'</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="p">{</span> <span class="na">firstName</span> <span class="p">:</span> <span class="s1">'Chris'</span> <span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">registry</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span>
+
+<span class="nx">registry</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="s1">'an eager student of JavaScript'</span><span class="p">);</span>
+<span class="nx">registry</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">y</span><span class="p">,</span> <span class="s1">'Thor'</span><span class="p">);</span>
+
+<span class="nx">x</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="s1">'Fujino'</span><span class="p">;</span>
+<span class="nx">y</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="s1">'Hemsworth'</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="s1">' '</span> <span class="o">+</span> <span class="nx">x</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">+</span> <span class="s1">' is '</span> <span class="o">+</span> <span class="nx">registry</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">x</span><span class="p">));</span>
+</code></pre>
+</div>
+
+<p>Even though the contents of <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> are the same at the time registry.set() is called, they produce distinct entries because the map uses references to the two objects as its keys.</p>
+
+<h2 id="weakmaps">WeakMaps</h2>
+
+<p>Maps are really cool, but they produce a potential memory leak because if you store a reference to a certain object as a map key, that object will not be garbage collected, even if it’s no longer referenced elsewhere in your code. Map properties can be manually deleted with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/delete">Map.prototype.delete(key)</a>, but you would have to keep track of this yourself, and works counterintuitive to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management">the way JavaScript handles memory management</a>.</p>
+
+<p>Thus, ES2016 also has WeakMaps, which are similar to Maps with the following differences:</p>
+
+<ol>
+  <li>WeakMap key entries must be object references</li>
+  <li>These references will not interfere with garbage collection. Thus, if a reference to an object is used as a WeakMap key but that object is no longer referenced elsewhere, the garbage collector will remove that object and also its WeakMap property.</li>
+  <li>Though maps have a built-in Map.prototype.size property, since we’re never quite sure when garbage collection will happen, WeakMaps don’t have this property. They also don’t have a .forEach() method as—again—its contents are not deterministic.</li>
+</ol>
+
+<p>Here’s an example implementation:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="p">{</span> <span class="na">name</span> <span class="p">:</span> <span class="s1">'my first object'</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="p">{</span> <span class="na">name</span> <span class="p">:</span> <span class="s1">'my second object'</span><span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">wm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WeakMap</span><span class="p">([</span>
+  <span class="p">[</span><span class="nx">x</span><span class="p">,</span> <span class="s1">'metadata about x'</span><span class="p">],</span>
+  <span class="p">[</span><span class="nx">y</span><span class="p">,</span> <span class="s1">'metadata about y'</span><span class="p">]</span>
+<span class="p">]);</span>
+
+<span class="p">(</span><span class="kd">function</span><span class="p">(){</span>  <span class="c1">// This IIFE creates an isolated scope</span>
+  <span class="kd">var</span> <span class="nx">z</span> <span class="o">=</span> <span class="p">{</span> <span class="na">name</span> <span class="p">:</span> <span class="s1">'my third object'</span> <span class="p">};</span>
+  <span class="nx">wm</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">z</span><span class="p">,</span> <span class="s1">'metadata about z'</span><span class="p">);</span>
+<span class="p">})();</span>
+
+<span class="nx">z</span><span class="p">;</span>          <span class="c1">// here z is no longer in scope, we can't access it</span>
+<span class="nx">wm</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">z</span><span class="p">);</span>  <span class="c1">// will this return metadata about z? can't be sure</span>
+</code></pre>
+</div>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>&copy;2017 - Christopher Fujino</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

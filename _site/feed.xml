@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://0.0.0.0/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0/" rel="alternate" type="text/html" /><updated>2017-09-10T22:16:16-07:00</updated><id>http://0.0.0.0/</id><title type="html">Monochrome | A minimal, responsive Jekyll blog theme</title><subtitle>A minimal, responsive, ready to use blog template, built with Jekyll.</subtitle><author><name>The Review Index</name><email>dyutibarma@gmail.com</email></author><entry><title type="html">Sf.js</title><link href="http://0.0.0.0/sfjs" rel="alternate" type="text/html" title="Sf.js" /><published>2016-10-13T11:32:22-07:00</published><updated>2016-10-13T11:32:22-07:00</updated><id>http://0.0.0.0/sfjs</id><content type="html" xml:base="http://0.0.0.0/sfjs">&lt;p&gt;I recently went to the Bay Area to visit my brother and got a chance to go to
+some meetups and mingle with the local nerdfolk. Here’s a summary of the
+meetups I attended and what I learned:&lt;/p&gt;
+
+&lt;h2 id=&quot;electron-meetup&quot;&gt;Electron Meetup&lt;/h2&gt;
+
+&lt;p&gt;The first meetup was for the exciting new Node.js-based framework
+&lt;a href=&quot;electron.atom.io&quot;&gt;Electron&lt;/a&gt;. It lets you build desktop apps in HTML/CSS/JS
+and then distribute it to Windows/OS X/Linux. I’ve been playing around with
+it, so I was excited to hear more about it, especially since two of the
+presenters were from Github and part of the Electron team.&lt;/p&gt;
+
+&lt;p&gt;The first presentation was a primer on new features added to Electron. The
+project only recently hit version 1.0 and it’s still under heavy development.
+I think for anyone using it in production it’s going to be important to keep
+track of development and the direction the team goes.&lt;/p&gt;
+
+&lt;p&gt;Next we had a demo of building an Electron app to send commands to a robot.
+All the serious code was handled by pre-existing Node.js plug-ins, but it was
+a fun demo (showing off the
+&lt;a href=&quot;http://store.sphero.com/products/bb-8-by-sphero&quot;&gt;Sphero BB-8 robot&lt;/a&gt;), and
+shows how easy it is to quickly build a desktop GUI app using Node.js
+packages.&lt;/p&gt;
+
+&lt;p&gt;The most interesting presentation from a technological perspective was
+from a member of the &lt;a href=&quot;https://slack.com&quot;&gt;Slack&lt;/a&gt; team, showing off their new
+project &lt;a href=&quot;https://github.com/electron/electron-compile&quot;&gt;Electron-Compile&lt;/a&gt;.
+It’s a way to simplify the transpilation of source code into HTML/CSS/JS
+during development of an Electron app. Much time was spent demonstrating
+the cleverness of the team in achieving this, which I can’t reproduce here.
+It was most impressive, and definitely something I will look into using for
+my next Electron project.&lt;/p&gt;
+
+&lt;p&gt;And finally, the most entertaining presentation from the presenter with the
+most flair, &lt;a href=&quot;https://twitter.com/rauchg&quot;&gt;Guillermo Rauch&lt;/a&gt; basically showed
+off his nifty new Electron-based terminal emulator,
+&lt;a href=&quot;https://github.com/zeit/hyper&quot;&gt;Hyper.app&lt;/a&gt; (until a recent cease &amp;amp; desist
+known as HyperTerm). I didn’t really learn much knew, as I was already
+familiar with the project, but I was dazzled by the things he could do with
+it. I highly recommend checking out Hyper.app and playing around with it.
+I would describe it as the &lt;a href=&quot;https://atom.io&quot;&gt;Atom&lt;/a&gt; of terminal emulators.&lt;/p&gt;
+
+&lt;h2 id=&quot;typescript&quot;&gt;TypeScript&lt;/h2&gt;
+
+&lt;p&gt;My next meetup was at Google’s SF Headquarters to learn about TypeScript,
+last year’s hot new language to transpile to JavaScript that I haven’t heard
+much on since. I have a lot less to say about this presentation, as it it
+simply wasn’t as interesting. The main thing that I learned from it is that,
+contrary to what I’d heard before, the main advantage of TypeScript is not
+avoiding type errors at runtime but actually to allow for better tooling
+(specifically better IntelliSense code-completion in Visual Studio/VS Code).
+It makes sense now why Microsoft would create and push TypeScript, as it
+seems well married to their text editors.&lt;/p&gt;
+
+&lt;h2 id=&quot;nodeschool-sf&quot;&gt;NodeSchool SF&lt;/h2&gt;
+
+&lt;p&gt;Finally, while not a true meetup, I attended
+&lt;a href=&quot;http://nodeschool.io&quot;&gt;NodeSchool&lt;/a&gt; SF, an open workshop for learning more
+about Node.js. I attended a special workshop there on contributing to the
+Node.js core codebase. There, I found that I had a little trouble actually
+Node.js from source because on my Arch Linux installation Python 3 is named
+simply &lt;code class=&quot;highlighter-rouge&quot;&gt;python&lt;/code&gt;, and the Node.js make files expect Python 2. I finally got
+around this by temporarily symlinking &lt;code class=&quot;highlighter-rouge&quot;&gt;python2&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;python&lt;/code&gt; and overriding my
+usual &lt;code class=&quot;highlighter-rouge&quot;&gt;$PATH&lt;/code&gt;. After getting it compiled, my first commit to the Node.js
+project was &lt;a href=&quot;https://github.com/nodejs/node/commit/7f7502d901e8eb9db5213121a6b0a9d4f825d23c&quot;&gt;a modification to the documentation regarding building it&lt;/a&gt;.
+Just getting my feet wet, to be sure, but a satisfying feeling.&lt;/p&gt;</content><author><name>The Review Index</name><email>dyutibarma@gmail.com</email></author><summary type="html">I recently went to the Bay Area to visit my brother and got a chance to go to some meetups and mingle with the local nerdfolk. Here’s a summary of the meetups I attended and what I learned:</summary></entry><entry><title type="html">A CSS Word-break Bug</title><link href="http://0.0.0.0/Word-Break-Bug" rel="alternate" type="text/html" title="A CSS Word-break Bug" /><published>2016-09-12T09:05:11-07:00</published><updated>2016-09-12T09:05:11-07:00</updated><id>http://0.0.0.0/Word-Break-Bug</id><content type="html" xml:base="http://0.0.0.0/Word-Break-Bug">&lt;p&gt;So on &lt;a href=&quot;https://teach-me-to-code.github.io/2016/07/21/Teaching-C-To-A-JS-Developer/&quot;&gt;my last post&lt;/a&gt;, I encountered a strange bug on Chrome (but not on Firefox) where some of my text was breaking mid-word, without so much as a hyphen inserted. Here’s a screenshot:&lt;/p&gt;
+
+&lt;p&gt;I’m using &lt;a href=&quot;https://hexo.io&quot;&gt;the Hexo framework&lt;/a&gt; for my blog, along with a theme from github called &lt;a href=&quot;https://github.com/pinggod/hexo-theme-apollo&quot;&gt;Apollo&lt;/a&gt;, so I started reading through the SASS files, but couldn’t isolate what exactly was causing this strange bug I’d never encountered before.&lt;/p&gt;
+
+&lt;p&gt;Several online searches, however, lead me to the &lt;code class=&quot;highlighter-rouge&quot;&gt;word-break&lt;/code&gt; css property. &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/word-break&quot;&gt;According to MDN&lt;/a&gt;, “the &lt;strong&gt;word-break&lt;/strong&gt; CSS property is used to specify whether to break lines within words.” Sure enough, searching the SASS files for the Apollo theme, I found:&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#42b983&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;nl&quot;&gt;word-break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;break-all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;MDN says that &lt;code class=&quot;highlighter-rouge&quot;&gt;break-all&lt;/code&gt; specifies that “word breaks may be inserted between any character for non-CJK (Chinese/Japanese/Korean) text.” Sure enough, I realized the strange line breaks only occur during long anchor text. I’m guessing this was specified to break up long URLs, however since I use descriptive text as my anchor text, I commented out this attribute and my text rendered as expected.&lt;/p&gt;</content><author><name>The Review Index</name><email>dyutibarma@gmail.com</email></author><category term="CSS," /><category term="bug" /><summary type="html">So on my last post, I encountered a strange bug on Chrome (but not on Firefox) where some of my text was breaking mid-word, without so much as a hyphen inserted. Here’s a screenshot:</summary></entry><entry><title type="html">Teaching C To A JavaScript Developer</title><link href="http://0.0.0.0/Teaching-C-To-A-JS-Developer" rel="alternate" type="text/html" title="Teaching C To A JavaScript Developer" /><published>2016-07-21T10:52:14-07:00</published><updated>2016-07-21T10:52:14-07:00</updated><id>http://0.0.0.0/Teaching-C-To-A-JS-Developer</id><content type="html" xml:base="http://0.0.0.0/Teaching-C-To-A-JS-Developer">&lt;p&gt;According to Douglas Crockford, &lt;a href=&quot;http://www.crockford.com/javascript/javascript.html&quot;&gt;JavaScript is the world’s most misunderstood programming language&lt;/a&gt;, and I am inclined to agree. Especially in the ’90s, I think a lot of programmers first encountered JavaScript from a C/C++ or Java background (indeed, JavaScript-inventor Brendan Eich has said that he was tasked with creating Java’s little brother to run in the browser). I was one of them. We found the syntax very familiar. In fact, after reading a tutorial or two, I was able to write a slot machine game. JavaScript is such a flexible language that it is possible to write all kinds of applications in it without really understanding how the language works.&lt;/p&gt;
+
+&lt;p&gt;This has led to books such as those in the &lt;a href=&quot;https://github.com/getify/You-Dont-Know-JS&quot;&gt;You Don’t Know JS&lt;/a&gt; series. This has also led me to ask myself the question: is JavaScript a good first language for a programmer to learn? Certainly it would be easy to do some cool things with the language, but what about when the time comes to learn about &lt;a href=&quot;http://www.w3schools.com/js/js_hoisting.asp&quot;&gt;variable hoisting&lt;/a&gt;? And I only recently learned that JavaScript always passes by value, &lt;a href=&quot;http://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language&quot;&gt;even if that value happens to be a reference(?!)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Basically, there are a lot of educational materials out there for those from C-family or Java backgrounds to learn JavaScript, but I thought I would write this post as sort of the transitive, demonstrating the relative simplicity of C. It’s been many years on and I’m still trying to learn JavaScript, but I feel like it would be relatively easy to teach a programmer familiar with the complexities of JavaScript the straightforward and literal C language.&lt;/p&gt;
+
+&lt;h3 id=&quot;variable-types&quot;&gt;Variable Types&lt;/h3&gt;
+
+&lt;p&gt;Maybe the biggest difference between C and JavaScript is that C has statically-typed variables while JavaScript has dynamic, untyped variables. In C, variables must be defined before they are used as belonging to a fixed type, and must remain that type for the duration of their life.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;int i = 1;
+float pi = 3.14159
+char c = 'C'; // this is a character variable, it can only hold a single character
+char string[13] = &quot;Hello, world!&quot;;  // this is a string, or an array of characters
+int array[5] = { 1, 2, 3, 4, 5 }; // this is an array
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Variables don’t have to be initialized when they’re declared, but they have to be declared with a keyword corresponding to their type. Some important distinctions between JavaScript:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Integers and floats are separate types. There are other number types, such as &lt;code class=&quot;highlighter-rouge&quot;&gt;unsigned int&lt;/code&gt; for unsigned integers, or &lt;code class=&quot;highlighter-rouge&quot;&gt;long int&lt;/code&gt; for 32-bit integers, but for most cases integers and floats are sufficient.&lt;/li&gt;
+  &lt;li&gt;Arrays are not really a built-in data type as they are in JavaScript, but a collection of like-typed variables. You can create an array of any type. Arrays must be initialized with a size when it’s declared, and cannot be resized.&lt;/li&gt;
+  &lt;li&gt;Characters are their own type, and are essentially the same as an 8-bit integer. “Strings” in C are simply arrays of characters.&lt;/li&gt;
+  &lt;li&gt;Single quotes are used to denote single characters in C, while double quotes are used for strings.&lt;/li&gt;
+  &lt;li&gt;Since C isn’t object-oriented, these data types have no properties or methods. Arrays have no &lt;code class=&quot;highlighter-rouge&quot;&gt;.length&lt;/code&gt; property, and numbers have no &lt;code class=&quot;highlighter-rouge&quot;&gt;.toString()&lt;/code&gt; methods. There are, however, libraries for manipulating these data types.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;variable-scope&quot;&gt;Variable Scope&lt;/h3&gt;
+
+&lt;p&gt;In C, variables are block-scoped. Global variables can be declared explicitly by declaring them outside of any function. C has no variable hoisting, and C variables cannot be used without declaring them.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;int i = 1;
+
+int main() {
+  int i = 2;
+
+  if (1) {
+    int i = 3;
+    printf(&quot;%i\n&quot;, i);  // will print out &quot;3&quot;, the local block value
+  }
+
+  func(); // will print out &quot;1&quot;, global value
+  return 0;
+}
+
+void func() {
+  printf(&quot;%i\n&quot;, i);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is similar to the ES6 &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; operator’s behavior, though &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; still hoists the declaration to the top of the block.&lt;/p&gt;
+
+&lt;h3 id=&quot;pointers&quot;&gt;Pointers&lt;/h3&gt;
+
+&lt;p&gt;Probably the most feared part of the C language is pointers. They’re really not that awful, though.&lt;/p&gt;
+
+&lt;p&gt;A normal variable in C contains a value, which is stored in some address in memory. A pointer in C contains an address in memory, which contains (maybe) some value. Pointers are declared by adding an &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; before the variable’s name. Uninitialized pointers are dangerous because we don’t know what they’re pointing at. Regular pointers can return their address through the use of the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; operator. By default, pointers return the address they contain, but they can return the value of the address they point to by prefacing them again by the &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; operator. For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;int x = 5;
+int *pointer = &amp;amp;x;
+
+printf(&quot;%i&quot;, pointer);  // this will return a memory address, not sure what it will be
+printf(&quot;%i&quot;, *pointer); // this will turn 5, where pointer points to
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Printing a memory address to standard output is not very helpful. However, using pointers is helpful in passing larger data structures like arrays to a function. In fact, under the hood, this is similar to how JavaScript passes objects to functions. Pointers can also be used to change the value of a variable within an external function. Without pointers, variables are passed to functions by value. For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;int main (void) {
+  int x = 5;
+  int pointer = &amp;amp;x;
+
+  func(pointer);  // here the address is passed to the function
+  printf(&quot;%i\n&quot;, *pointer); // value is now 3
+}
+
+void func(int *x) {
+  *x = 3;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As noted earlier, arrays are not really a built-in type in C. Actually, array notation is just a shorthand for a pointer which accesses adjacent locations in memory. For instance if you create a string of 8 characters, those characters will all be stored next to each other in memory. It’s important to note, also, that the name of an array (or string) by itself will refer to the address of its first element. Thus a pointer can be assigned to an array like so: &lt;code class=&quot;highlighter-rouge&quot;&gt;pointer = array;&lt;/code&gt;. This pointer will now point to the address of the first element. A neat trick is that since the memory locations in an array are adjacent, the increment operator &lt;code class=&quot;highlighter-rouge&quot;&gt;++&lt;/code&gt; will increment through the elements of the array. For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;char string[] = &quot;Hello, world!&quot;;
+char *pointer = string; // pointer assigned to address of string
+while(*pointer) { // while our pointer still points to a valid character
+  printf(&quot;%c&quot;, *pointer); // print out the contents the pointer points to
+  pointer++;  // point to the next location in memory
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This code will print out characters of the string one by one. The while-loop works because in C, strings are terminated with a &lt;code class=&quot;highlighter-rouge&quot;&gt;null&lt;/code&gt; character.&lt;/p&gt;
+
+&lt;h3 id=&quot;memory-allocation&quot;&gt;Memory Allocation&lt;/h3&gt;
+
+&lt;p&gt;In JavaScript, memory management is automated. When you make an array bigger in JavaScript, the additional memory is allocated for you. When variables are no longer referenced, they are garbage collected for you.&lt;/p&gt;
+
+&lt;p&gt;In C, you have to handle this yourself. Let’s say you have a program that creates an array of &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; integers, where &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; is a count read from the user. We cannot initialize the array in our code, because we do not know what size to make it before runtime. The &lt;code class=&quot;highlighter-rouge&quot;&gt;malloc&lt;/code&gt; function, specified by the &lt;code class=&quot;highlighter-rouge&quot;&gt;malloc.h&lt;/code&gt; header file, will allocate memory of a specified size from the heap, and return an address to it. For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;int main(void) {
+  int size = 0; // this will be the size of our string
+  char *initial;  // this will point to the beginning of our string
+
+  printf(&quot;How big of a string would you like? &quot;);
+  scanf(&quot;%i&quot;, &amp;amp;size); // read an integer from input, and store in size
+  initial = (char *)malloc(size); // allocate a string of &quot;size&quot; length
+  char *increment = initial;  // this pointer will move through the string
+  for (int i=0; i&amp;lt;size; i++) {
+    *increment = '!'; // fill the string with exclamation points
+    increment++;
+  }
+  printf(&quot;%s\n&quot;, initial);  // print out the string
+
+  return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This can potentially lead to memory leaks, if your application continues to allocate for itself more and more memory. It is up to the programmer to keep track of this memory that has been allocated, and then free it when it is no longer used. This is done with the &lt;code class=&quot;highlighter-rouge&quot;&gt;free()&lt;/code&gt; function, which takes a pointer to the allocated chunk as its argument. E.g.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;myFunc(char *string, int size) {
+  char *pointer = (char *)malloc(size);
+  strcpy(pointer, string);
+  printf(&quot;%s&quot;, pointer);
+  free(pointer);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This isn’t a particularly useful example, but it shows code that would be a potential memory leak if not for the use of &lt;code class=&quot;highlighter-rouge&quot;&gt;free(pointer)&lt;/code&gt; at the end. Otherwise, each time the function was called, the application would use more memory, while the pointer to it would be lost.&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;So what have we learned? Well, for one, it’s pretty clear to me that JavaScript uses pointers a lot, it just abstracts the programmer away from those details. I can see how JavaScript not only uses them to arrays/objects to and from functions, but even for the implementation of the objects themselves.&lt;/p&gt;
+
+&lt;p&gt;It’s also very clear to me that programming in JavaScript is like getting a job done with your big brother holding your hand; a big brother who steps in and manages certain difficult tasks for you, so that you can focus on the big picture. On the other hand, coding in C is flying solo, without anyone checking on what you do, or helping you to manage everything going on. Which explains why a lot of C programmers (myself included) mocked JavaScript at first. It seemed like a kid’s toy. And yet, in retrospect, it’s clear that higher-level languages like JavaScript are more suited to large, complex projects. Also, memory limits and processor speed are less of a concern these days, so most applications today don’t &lt;strong&gt;NEED&lt;/strong&gt; to be written in C.&lt;/p&gt;
+
+&lt;p&gt;The classic example of the limitations of C is the buffer overrun. Because arrays in C basically use a pointer to look at consecutive addresses in memory, there is no built-in bounds checking. If you look beyond the end of the array, the pointer simply points further in memory than it should, and can read/write to someplace potentially dangerous. See:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C&quot;&gt;void getPin() {
+  char pin[5];  // since every string ends with NULL, we make this 5 elements big
+  printf(&quot;Enter your 4-digit pin: &quot;);
+  scanf(&quot;%s&quot;, pin);
+  // process the pin
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With this code, we are passing &lt;code class=&quot;highlighter-rouge&quot;&gt;scanf()&lt;/code&gt; the location of the first element in the &lt;code class=&quot;highlighter-rouge&quot;&gt;pin&lt;/code&gt; string we have created, but it doesn’t know how big it is. If the user types in a string longer than 4 characters long, scanf will continue writing the contents past the end of the &lt;code class=&quot;highlighter-rouge&quot;&gt;pin&lt;/code&gt; string. At best, this will cause unpredictable results, at worst this could lead to a malicious user injecting malicious code into the application. We never have to worry about this with JavaScript strings.&lt;/p&gt;</content><author><name>The Review Index</name><email>dyutibarma@gmail.com</email></author><category term="JavaScript" /><category term="C" /><summary type="html">According to Douglas Crockford, JavaScript is the world’s most misunderstood programming language, and I am inclined to agree. Especially in the ’90s, I think a lot of programmers first encountered JavaScript from a C/C++ or Java background (indeed, JavaScript-inventor Brendan Eich has said that he was tasked with creating Java’s little brother to run in the browser). I was one of them. We found the syntax very familiar. In fact, after reading a tutorial or two, I was able to write a slot machine game. JavaScript is such a flexible language that it is possible to write all kinds of applications in it without really understanding how the language works.</summary></entry><entry><title type="html">ES6 Maps, Weak Maps, and the Determinism of the JavaScript Garbage Collector</title><link href="http://0.0.0.0/Hash-Maps-ES6-Maps-and-Weak-Maps" rel="alternate" type="text/html" title="ES6 Maps, Weak Maps, and the Determinism of the JavaScript Garbage Collector" /><published>2016-07-09T11:13:42-07:00</published><updated>2016-07-09T11:13:42-07:00</updated><id>http://0.0.0.0/Hash-Maps-ES6-Maps-and-Weak-Maps</id><content type="html" xml:base="http://0.0.0.0/Hash-Maps-ES6-Maps-and-Weak-Maps">&lt;p&gt;Let’s say you have an app with a number of objects, and you’d like to store metadata about certain objects. How would you do this? What I’ve been doing is creating a special object for the purpose, like so:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uniqueIdentifier&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;this is my first object&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uniqueIdentifier&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;this is my second object&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;uniqueIdentifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'this object is okay'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;uniqueIdentifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'but this object is my favorite!'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;': '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here we have two objects, &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt;, which we’d like to keep metadata about in a variable called &lt;code class=&quot;highlighter-rouge&quot;&gt;registry&lt;/code&gt;. We use as the key for each entry in our registry the object in question’s “uniqueIdentifier” property. Now, at any later time, if we’d like to access the metadata about an object, all we need to know is the value of the object’s “uniqueIdentifier” property.&lt;/p&gt;
+
+&lt;p&gt;Restrictions for this method are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Every object that will be stored in the registry should have a common property with the same key name, here called “uniqueIdentifier”.&lt;/li&gt;
+  &lt;li&gt;Each object must have a unique value to this property, or else registry entries will get overwritten.&lt;/li&gt;
+  &lt;li&gt;The value to this property must be a string, because the key names for our registry object must be strings.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;A workaround for the last two would be creating a hashing function, but this must be deterministic (i.e. it must be repeatable, or else we would not be able to consistently look up this value in the future). Somehow the values of each object to be tracked in the registry must be unique.&lt;/p&gt;
+
+&lt;p&gt;An example of restriction 2 is as follows:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Michael'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lastName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Jordan'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Michael'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lastName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Jackson'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Andrew'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lastName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Jackson'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firstName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a basketball player'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firstName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a musician'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firstName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a US president'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lastName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' was '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here the metadata for Michael Jordan been overwritten by that for Michael Jackson because we used &lt;code class=&quot;highlighter-rouge&quot;&gt;firstName&lt;/code&gt; as our registry key. Here we would have the same problem if we used &lt;code class=&quot;highlighter-rouge&quot;&gt;lastName&lt;/code&gt;, because it is not universally unique either. In this example we could create unique identifiers by concatenating the first and last names, but there might be objects where these are the same too, and this would be more of a bandage on the problem than an true solution.&lt;/p&gt;
+
+&lt;p&gt;This is essentially JavaScript’s makeshift equivalent of a &lt;a href=&quot;https://en.wikipedia.org/wiki/Hash_table&quot;&gt;hash map&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;es2015-maps&quot;&gt;ES2015 Maps&lt;/h2&gt;
+
+&lt;p&gt;With ES2015, we now have a new native, built-in object for handling these kinds of maps, unsurprisingly called &lt;code class=&quot;highlighter-rouge&quot;&gt;Map&lt;/code&gt;. Here’s our previous example, re-written using an ES2015 map:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Michael'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lastName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Jordan'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Michael'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lastName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Jackson'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Andrew'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lastName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Jackson'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a basketball player'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a musician'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a US president'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lastName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' was '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here we called the native &lt;code class=&quot;highlighter-rouge&quot;&gt;Map&lt;/code&gt; object’s constructor to create our registry (we could have initialized our registry by passing an array of arrays of key-value pairs to the constructor, but this method is more directly analogous to our previous example). The &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set&quot;&gt;Map.prototype.set() method&lt;/a&gt; takes a key-value pair as its arguments. And—as you can see from our example—map keys don’t have to be strings, they can be any valid JavaScript type, including objects (technically a reference to the object). So rather than having to use some unique identifier to specify each object in our registry, we can use a reference to the object itself as the key. This essentially removes our previous 3 restrictions.&lt;/p&gt;
+
+&lt;p&gt;A neat bonus of this is that we can separately track objects that have the exact same values. For example:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Chris'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Chris'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'an eager student of JavaScript'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Thor'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lastName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Fujino'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lastName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Hemsworth'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;lastName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' is '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Even though the contents of &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt; are the same at the time registry.set() is called, they produce distinct entries because the map uses references to the two objects as its keys.&lt;/p&gt;
+
+&lt;h2 id=&quot;weakmaps&quot;&gt;WeakMaps&lt;/h2&gt;
+
+&lt;p&gt;Maps are really cool, but they produce a potential memory leak because if you store a reference to a certain object as a map key, that object will not be garbage collected, even if it’s no longer referenced elsewhere in your code. Map properties can be manually deleted with &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/delete&quot;&gt;Map.prototype.delete(key)&lt;/a&gt;, but you would have to keep track of this yourself, and works counterintuitive to &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management&quot;&gt;the way JavaScript handles memory management&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thus, ES2016 also has WeakMaps, which are similar to Maps with the following differences:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;WeakMap key entries must be object references&lt;/li&gt;
+  &lt;li&gt;These references will not interfere with garbage collection. Thus, if a reference to an object is used as a WeakMap key but that object is no longer referenced elsewhere, the garbage collector will remove that object and also its WeakMap property.&lt;/li&gt;
+  &lt;li&gt;Though maps have a built-in Map.prototype.size property, since we’re never quite sure when garbage collection will happen, WeakMaps don’t have this property. They also don’t have a .forEach() method as—again—its contents are not deterministic.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here’s an example implementation:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'my first object'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'my second object'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;wm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;WeakMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'metadata about x'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'metadata about y'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// This IIFE creates an isolated scope&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'my third object'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;wm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'metadata about z'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})();&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;          &lt;span class=&quot;c1&quot;&gt;// here z is no longer in scope, we can't access it&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;wm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// will this return metadata about z? can't be sure&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name>The Review Index</name><email>dyutibarma@gmail.com</email></author><category term="JS," /><category term="ES6" /><summary type="html">Let’s say you have an app with a number of objects, and you’d like to store metadata about certain objects. How would you do this? What I’ve been doing is creating a special object for the purpose, like so:</summary></entry><entry><title type="html">Git, Dotfiles, and the Dream of a Truly Cross-Platform Work Environment</title><link href="http://0.0.0.0/Git-Dotfiles-and-the-Dream" rel="alternate" type="text/html" title="Git, Dotfiles, and the Dream of a Truly Cross-Platform Work Environment" /><published>2016-06-28T10:24:21-07:00</published><updated>2016-06-28T10:24:21-07:00</updated><id>http://0.0.0.0/Git-Dotfiles-and-the-Dream</id><content type="html" xml:base="http://0.0.0.0/Git-Dotfiles-and-the-Dream">&lt;p&gt;So last October I started using Git to track my &lt;a href=&quot;https://github.com/christopherfujino/dotfiles&quot;&gt;dotfiles and config files&lt;/a&gt;. Although it makes sense to use version control in case you make a change that breaks your system, to me the biggest appeal of doing this was so that I could easily synchronize all my config files between devices. My &lt;a href=&quot;https://github.com/christopherfujino/dotfiles/commit/041b0d1d845e640d3534f5ebbe73da3315a646f9&quot;&gt;first commit&lt;/a&gt; included config files for npm and vim, and now it’s grown to include bash, window managers, and terminal emulators.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-problem&quot;&gt;The Problem&lt;/h2&gt;
+
+&lt;p&gt;At first I wasn’t sure how to track the files. Looking around on Github, a lot of coders, including the eminent &lt;a href=&quot;https://github.com/tpope/tpope&quot;&gt;tpope&lt;/a&gt;, seemed to just &lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt; their home directory, and then &lt;code class=&quot;highlighter-rouge&quot;&gt;git add&lt;/code&gt; each file they wanted to track. This seemed a messy solution, however, and also would not translate well to my different systems (both different software setups and of course different operating systems).&lt;/p&gt;
+
+&lt;h2 id=&quot;an-elegant-solution-for-a-more-civilized-age&quot;&gt;An Elegant Solution for a More Civilized Age&lt;/h2&gt;
+
+&lt;p&gt;The solution I came up with was to store all the config files which I wanted to track in a separate directory (I chose &lt;code class=&quot;highlighter-rouge&quot;&gt;~/git/dotfiles&lt;/code&gt;) tracked by git. I then symlinked from each tracked file to the location on my system the file was supposed to be (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;$ ln -s ~/git/dotfiles/.vimrc ~/.vimrc&lt;/code&gt;). This allowed me to &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone&lt;/code&gt; the repo safely onto any system, and then choose which individual files I wanted to utilize on that system.&lt;/p&gt;
+
+&lt;p&gt;The fact that this solution was cross-platform (I currently use it on my Arch Linux laptop, my OS X desktop, and a headless linux server on the cloud) was very exciting to me. It was a big motivation for me to build up my .vimrc, knowing I could use that setup on any of my systems, including servers I SSH into. I also recently switched to using &lt;a href=&quot;http://software.schmorp.de/pkg/rxvt-unicode.html&quot;&gt;rxvt-unicode&lt;/a&gt; as my Linux terminal emulator of choice. I would call it the terminal emulator equivalent of Vim: lightweight, seemingly minimal at first, but incredibly customizable (and to topic at hand, all through a single text config file). I need to explore setting it up on OS X, but if I did I could have a consistent terminal experience across all my Unix-like devices. Which would be amazing.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-text-based-operating-system&quot;&gt;A Text-Based Operating System?&lt;/h2&gt;
+
+&lt;p&gt;The more I switch to using text-based (cross-platform) terminal apps, using config files which I sync on Github, the more I am approaching a text-based, platform independent operating system. Especially for coding, my main tools at the moment are tmux, Neovim/Vim, Git, npm. The only GUI tool is Chrome/Chromium. I can see a future where OS X or Linux are just trivial background platforms. I can see the IT world moving in this direction anyway with projects like &lt;a href=&quot;http://docker.com&quot;&gt;Docker&lt;/a&gt; and &lt;a href=&quot;https://coreos.com/&quot;&gt;CoreOS&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;teach-me-to-code&quot;&gt;Teach Me To Code&lt;/h2&gt;
+
+&lt;p&gt;The next thing I’d like to learn to level up my dotfiles would be to create a node.js text-based script to automate the symlinking of scripts to new systems. I recently discovered the &lt;a href=&quot;http://savannah.gnu.org/projects/stow&quot;&gt;GNU Stow&lt;/a&gt; project, which already solves this problem, but I’ve been meaning to learn how to create node.js terminal apps. Another would be to add in platform-specific (i.e. OS X or Linux) settings to certain config files. In particular it would be great if I could use the same bash config files on both platforms. Please let me know if you have any feedback, ideas, or suggestions for me!&lt;/p&gt;</content><author><name>The Review Index</name><email>dyutibarma@gmail.com</email></author><category term="Linux," /><category term="OS" /><category term="X," /><category term="git," /><category term="sysadmin" /><summary type="html">So last October I started using Git to track my dotfiles and config files. Although it makes sense to use version control in case you make a change that breaks your system, to me the biggest appeal of doing this was so that I could easily synchronize all my config files between devices. My first commit included config files for npm and vim, and now it’s grown to include bash, window managers, and terminal emulators.</summary></entry><entry><title type="html">Hello, World!</title><link href="http://0.0.0.0/Hello-World" rel="alternate" type="text/html" title="Hello, World!" /><published>2016-06-15T09:11:47-07:00</published><updated>2016-06-15T09:11:47-07:00</updated><id>http://0.0.0.0/Hello-World</id><content type="html" xml:base="http://0.0.0.0/Hello-World">&lt;p&gt;Most programming blogs feature posts from veteran programmers teaching others new concepts and techniques. However, I am a beginning programmer and I plan to blog about the things I’m learning and the difficulties I’m having. Hopefully I can help other beginning programmers, but more importantly I hope people will get involved and teach me to code!&lt;/p&gt;
+
+&lt;h2 id=&quot;why-i-chose-to-use-hexo&quot;&gt;Why I Chose To Use Hexo&lt;/h2&gt;
+
+&lt;p&gt;Over the years, I’ve experimented with many different ways to manage a blog. My very first website, handcoded in HTML in the late ’90s had a “news” section which was basically a primitive blog. After a lot of dabbling, I decided to use the &lt;a href=&quot;http://hexo.io&quot;&gt;Hexo&lt;/a&gt; static website framework to manage this blog. The primary factors in my decision to use Hexo were:&lt;/p&gt;
+
+&lt;h3 id=&quot;it-uses-markdown&quot;&gt;It uses markdown.&lt;/h3&gt;
+
+&lt;p&gt;This could be a whole other future post about why rich-text and &lt;a href=&quot;https://en.wikipedia.org/wiki/WYSIWYG&quot;&gt;WYSIWYG&lt;/a&gt; editors are evil. Ever since I discovered the &lt;a href=&quot;https://github.com/TryGhost/Ghost&quot;&gt;Ghost&lt;/a&gt; CMS, I’ve been excited about blogging in &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax#philosophy&quot;&gt;markdown&lt;/a&gt;. I do almost all of my writing in markdown anyway, so I wanted a system that uses it. With Hexo, blog posts are essentially markdown notes with frontmatter.&lt;/p&gt;
+
+&lt;h3 id=&quot;it-generates-static-websites&quot;&gt;It generates static websites.&lt;/h3&gt;
+
+&lt;p&gt;This means it can be managed locally offline and then published to a remote server using Git. Using tools that are available offline is important to me, as there are still many situations where I might want to work without internet access.&lt;/p&gt;
+
+&lt;p&gt;Another advantage of generating static pages is that the site can be hosted for free on &lt;a href=&quot;https://pages.github.com&quot;&gt;GitHub Pages&lt;/a&gt;. This means I don’t have a manage a server and I can focus instead on what’s most important, &lt;em&gt;the content&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;its-open-source-and-only-depends-on-nodejs--git&quot;&gt;It’s open-source and only depends on Node.js &amp;amp; Git.&lt;/h3&gt;
+
+&lt;p&gt;In order to use Jekyll, I had to install and configure Ruby, which isn’t a part of normal workflow. The only dependencies Hexo requires are Node.js &amp;amp; Git (I’m actually using a lot of other open-source projects for this blog, but they’re all managed with npm). I already use Node.js, so getting Hexo up &amp;amp; running was as simple as executing:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;npm install -g hexo-cli
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;hexo init project-name
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;project-name
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;npm install
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;hexo serve
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;On a more philosophical note, as much as possible I try to use open-source software, and since I am currently focusing on JavaScript, I really wanted to use a tool that was written in JavaScript so that I could understand how it works and possibly even extend it down the line.&lt;/p&gt;
+
+&lt;h3 id=&quot;teach-me-to-code&quot;&gt;Teach Me To Code&lt;/h3&gt;
+
+&lt;p&gt;What do you think about my criteria? Is there a better choice I could have made? And any other questions or comments, hit me up on social media.&lt;/p&gt;</content><author><name>The Review Index</name><email>dyutibarma@gmail.com</email></author><category term="javascript," /><category term="node.js," /><category term="markdown," /><category term="hexo" /><summary type="html">Most programming blogs feature posts from veteran programmers teaching others new concepts and techniques. However, I am a beginning programmer and I plan to blog about the things I’m learning and the difficulties I’m having. Hopefully I can help other beginning programmers, but more importantly I hope people will get involved and teach me to code!</summary></entry></feed>

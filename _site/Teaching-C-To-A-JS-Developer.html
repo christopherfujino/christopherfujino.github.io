@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>Teaching C To A JavaScript Developer</title>
+  <meta name="description" content="A minimal, responsive, ready to use blog template, built with Jekyll.">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/about" title="About Monochrome">About Monochrome</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://github.com/thereviewindex/monochrome/archive/master.zip">Download</a>
+<a href="https://github.com/thereviewindex/monochrome">Project on Github</a>
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/">
+        <h1>
+          <span>mono</span>chrome
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+	    
+	      
+	    
+	      
+	        <a href="/about" title="About Monochrome">About Monochrome</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+      <!-- Nav links -->
+	    <a href="https://github.com/thereviewindex/monochrome/archive/master.zip">Download</a>
+<a href="https://github.com/thereviewindex/monochrome">Project on Github</a>
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>Teaching C To A JavaScript Developer</h2>		
+	<time datetime="2016-07-21T10:52:14-07:00" class="by-line">21 Jul 2016</time>
+	<div class="content">
+
+		<p>According to Douglas Crockford, <a href="http://www.crockford.com/javascript/javascript.html">JavaScript is the world’s most misunderstood programming language</a>, and I am inclined to agree. Especially in the ’90s, I think a lot of programmers first encountered JavaScript from a C/C++ or Java background (indeed, JavaScript-inventor Brendan Eich has said that he was tasked with creating Java’s little brother to run in the browser). I was one of them. We found the syntax very familiar. In fact, after reading a tutorial or two, I was able to write a slot machine game. JavaScript is such a flexible language that it is possible to write all kinds of applications in it without really understanding how the language works.</p>
+
+<p>This has led to books such as those in the <a href="https://github.com/getify/You-Dont-Know-JS">You Don’t Know JS</a> series. This has also led me to ask myself the question: is JavaScript a good first language for a programmer to learn? Certainly it would be easy to do some cool things with the language, but what about when the time comes to learn about <a href="http://www.w3schools.com/js/js_hoisting.asp">variable hoisting</a>? And I only recently learned that JavaScript always passes by value, <a href="http://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language">even if that value happens to be a reference(?!)</a>.</p>
+
+<p>Basically, there are a lot of educational materials out there for those from C-family or Java backgrounds to learn JavaScript, but I thought I would write this post as sort of the transitive, demonstrating the relative simplicity of C. It’s been many years on and I’m still trying to learn JavaScript, but I feel like it would be relatively easy to teach a programmer familiar with the complexities of JavaScript the straightforward and literal C language.</p>
+
+<h3 id="variable-types">Variable Types</h3>
+
+<p>Maybe the biggest difference between C and JavaScript is that C has statically-typed variables while JavaScript has dynamic, untyped variables. In C, variables must be defined before they are used as belonging to a fixed type, and must remain that type for the duration of their life.</p>
+
+<pre><code class="language-C">int i = 1;
+float pi = 3.14159
+char c = 'C'; // this is a character variable, it can only hold a single character
+char string[13] = "Hello, world!";  // this is a string, or an array of characters
+int array[5] = { 1, 2, 3, 4, 5 }; // this is an array
+</code></pre>
+
+<p>Variables don’t have to be initialized when they’re declared, but they have to be declared with a keyword corresponding to their type. Some important distinctions between JavaScript:</p>
+
+<ol>
+  <li>Integers and floats are separate types. There are other number types, such as <code class="highlighter-rouge">unsigned int</code> for unsigned integers, or <code class="highlighter-rouge">long int</code> for 32-bit integers, but for most cases integers and floats are sufficient.</li>
+  <li>Arrays are not really a built-in data type as they are in JavaScript, but a collection of like-typed variables. You can create an array of any type. Arrays must be initialized with a size when it’s declared, and cannot be resized.</li>
+  <li>Characters are their own type, and are essentially the same as an 8-bit integer. “Strings” in C are simply arrays of characters.</li>
+  <li>Single quotes are used to denote single characters in C, while double quotes are used for strings.</li>
+  <li>Since C isn’t object-oriented, these data types have no properties or methods. Arrays have no <code class="highlighter-rouge">.length</code> property, and numbers have no <code class="highlighter-rouge">.toString()</code> methods. There are, however, libraries for manipulating these data types.</li>
+</ol>
+
+<h3 id="variable-scope">Variable Scope</h3>
+
+<p>In C, variables are block-scoped. Global variables can be declared explicitly by declaring them outside of any function. C has no variable hoisting, and C variables cannot be used without declaring them.</p>
+
+<pre><code class="language-C">int i = 1;
+
+int main() {
+  int i = 2;
+
+  if (1) {
+    int i = 3;
+    printf("%i\n", i);  // will print out "3", the local block value
+  }
+
+  func(); // will print out "1", global value
+  return 0;
+}
+
+void func() {
+  printf("%i\n", i);
+}
+</code></pre>
+
+<p>This is similar to the ES6 <code class="highlighter-rouge">let</code> operator’s behavior, though <code class="highlighter-rouge">let</code> still hoists the declaration to the top of the block.</p>
+
+<h3 id="pointers">Pointers</h3>
+
+<p>Probably the most feared part of the C language is pointers. They’re really not that awful, though.</p>
+
+<p>A normal variable in C contains a value, which is stored in some address in memory. A pointer in C contains an address in memory, which contains (maybe) some value. Pointers are declared by adding an <code class="highlighter-rouge">*</code> before the variable’s name. Uninitialized pointers are dangerous because we don’t know what they’re pointing at. Regular pointers can return their address through the use of the <code class="highlighter-rouge">&amp;</code> operator. By default, pointers return the address they contain, but they can return the value of the address they point to by prefacing them again by the <code class="highlighter-rouge">*</code> operator. For example:</p>
+
+<pre><code class="language-C">int x = 5;
+int *pointer = &amp;x;
+
+printf("%i", pointer);  // this will return a memory address, not sure what it will be
+printf("%i", *pointer); // this will turn 5, where pointer points to
+</code></pre>
+
+<p>Printing a memory address to standard output is not very helpful. However, using pointers is helpful in passing larger data structures like arrays to a function. In fact, under the hood, this is similar to how JavaScript passes objects to functions. Pointers can also be used to change the value of a variable within an external function. Without pointers, variables are passed to functions by value. For example:</p>
+
+<pre><code class="language-C">int main (void) {
+  int x = 5;
+  int pointer = &amp;x;
+
+  func(pointer);  // here the address is passed to the function
+  printf("%i\n", *pointer); // value is now 3
+}
+
+void func(int *x) {
+  *x = 3;
+}
+</code></pre>
+
+<p>As noted earlier, arrays are not really a built-in type in C. Actually, array notation is just a shorthand for a pointer which accesses adjacent locations in memory. For instance if you create a string of 8 characters, those characters will all be stored next to each other in memory. It’s important to note, also, that the name of an array (or string) by itself will refer to the address of its first element. Thus a pointer can be assigned to an array like so: <code class="highlighter-rouge">pointer = array;</code>. This pointer will now point to the address of the first element. A neat trick is that since the memory locations in an array are adjacent, the increment operator <code class="highlighter-rouge">++</code> will increment through the elements of the array. For example:</p>
+
+<pre><code class="language-C">char string[] = "Hello, world!";
+char *pointer = string; // pointer assigned to address of string
+while(*pointer) { // while our pointer still points to a valid character
+  printf("%c", *pointer); // print out the contents the pointer points to
+  pointer++;  // point to the next location in memory
+}
+</code></pre>
+
+<p>This code will print out characters of the string one by one. The while-loop works because in C, strings are terminated with a <code class="highlighter-rouge">null</code> character.</p>
+
+<h3 id="memory-allocation">Memory Allocation</h3>
+
+<p>In JavaScript, memory management is automated. When you make an array bigger in JavaScript, the additional memory is allocated for you. When variables are no longer referenced, they are garbage collected for you.</p>
+
+<p>In C, you have to handle this yourself. Let’s say you have a program that creates an array of <code class="highlighter-rouge">x</code> integers, where <code class="highlighter-rouge">x</code> is a count read from the user. We cannot initialize the array in our code, because we do not know what size to make it before runtime. The <code class="highlighter-rouge">malloc</code> function, specified by the <code class="highlighter-rouge">malloc.h</code> header file, will allocate memory of a specified size from the heap, and return an address to it. For example:</p>
+
+<pre><code class="language-C">int main(void) {
+  int size = 0; // this will be the size of our string
+  char *initial;  // this will point to the beginning of our string
+
+  printf("How big of a string would you like? ");
+  scanf("%i", &amp;size); // read an integer from input, and store in size
+  initial = (char *)malloc(size); // allocate a string of "size" length
+  char *increment = initial;  // this pointer will move through the string
+  for (int i=0; i&lt;size; i++) {
+    *increment = '!'; // fill the string with exclamation points
+    increment++;
+  }
+  printf("%s\n", initial);  // print out the string
+
+  return 0;
+}
+</code></pre>
+
+<p>This can potentially lead to memory leaks, if your application continues to allocate for itself more and more memory. It is up to the programmer to keep track of this memory that has been allocated, and then free it when it is no longer used. This is done with the <code class="highlighter-rouge">free()</code> function, which takes a pointer to the allocated chunk as its argument. E.g.</p>
+
+<pre><code class="language-C">myFunc(char *string, int size) {
+  char *pointer = (char *)malloc(size);
+  strcpy(pointer, string);
+  printf("%s", pointer);
+  free(pointer);
+}
+</code></pre>
+
+<p>This isn’t a particularly useful example, but it shows code that would be a potential memory leak if not for the use of <code class="highlighter-rouge">free(pointer)</code> at the end. Otherwise, each time the function was called, the application would use more memory, while the pointer to it would be lost.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>So what have we learned? Well, for one, it’s pretty clear to me that JavaScript uses pointers a lot, it just abstracts the programmer away from those details. I can see how JavaScript not only uses them to arrays/objects to and from functions, but even for the implementation of the objects themselves.</p>
+
+<p>It’s also very clear to me that programming in JavaScript is like getting a job done with your big brother holding your hand; a big brother who steps in and manages certain difficult tasks for you, so that you can focus on the big picture. On the other hand, coding in C is flying solo, without anyone checking on what you do, or helping you to manage everything going on. Which explains why a lot of C programmers (myself included) mocked JavaScript at first. It seemed like a kid’s toy. And yet, in retrospect, it’s clear that higher-level languages like JavaScript are more suited to large, complex projects. Also, memory limits and processor speed are less of a concern these days, so most applications today don’t <strong>NEED</strong> to be written in C.</p>
+
+<p>The classic example of the limitations of C is the buffer overrun. Because arrays in C basically use a pointer to look at consecutive addresses in memory, there is no built-in bounds checking. If you look beyond the end of the array, the pointer simply points further in memory than it should, and can read/write to someplace potentially dangerous. See:</p>
+
+<pre><code class="language-C">void getPin() {
+  char pin[5];  // since every string ends with NULL, we make this 5 elements big
+  printf("Enter your 4-digit pin: ");
+  scanf("%s", pin);
+  // process the pin
+}
+</code></pre>
+
+<p>With this code, we are passing <code class="highlighter-rouge">scanf()</code> the location of the first element in the <code class="highlighter-rouge">pin</code> string we have created, but it doesn’t know how big it is. If the user types in a string longer than 4 characters long, scanf will continue writing the contents past the end of the <code class="highlighter-rouge">pin</code> string. At best, this will cause unpredictable results, at worst this could lead to a malicious user injecting malicious code into the application. We never have to worry about this with JavaScript strings.</p>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>&copy;2017 - Christopher Fujino</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

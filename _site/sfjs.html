@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>Sf.js</title>
+  <meta name="description" content="A minimal, responsive, ready to use blog template, built with Jekyll.">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/about" title="About Monochrome">About Monochrome</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://github.com/thereviewindex/monochrome/archive/master.zip">Download</a>
+<a href="https://github.com/thereviewindex/monochrome">Project on Github</a>
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/">
+        <h1>
+          <span>mono</span>chrome
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+	    
+	      
+	    
+	      
+	        <a href="/about" title="About Monochrome">About Monochrome</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+      <!-- Nav links -->
+	    <a href="https://github.com/thereviewindex/monochrome/archive/master.zip">Download</a>
+<a href="https://github.com/thereviewindex/monochrome">Project on Github</a>
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>Sf.js</h2>		
+	<time datetime="2016-10-13T11:32:22-07:00" class="by-line">13 Oct 2016</time>
+	<div class="content">
+
+		<p>I recently went to the Bay Area to visit my brother and got a chance to go to
+some meetups and mingle with the local nerdfolk. Here’s a summary of the
+meetups I attended and what I learned:</p>
+
+<h2 id="electron-meetup">Electron Meetup</h2>
+
+<p>The first meetup was for the exciting new Node.js-based framework
+<a href="electron.atom.io">Electron</a>. It lets you build desktop apps in HTML/CSS/JS
+and then distribute it to Windows/OS X/Linux. I’ve been playing around with
+it, so I was excited to hear more about it, especially since two of the
+presenters were from Github and part of the Electron team.</p>
+
+<p>The first presentation was a primer on new features added to Electron. The
+project only recently hit version 1.0 and it’s still under heavy development.
+I think for anyone using it in production it’s going to be important to keep
+track of development and the direction the team goes.</p>
+
+<p>Next we had a demo of building an Electron app to send commands to a robot.
+All the serious code was handled by pre-existing Node.js plug-ins, but it was
+a fun demo (showing off the
+<a href="http://store.sphero.com/products/bb-8-by-sphero">Sphero BB-8 robot</a>), and
+shows how easy it is to quickly build a desktop GUI app using Node.js
+packages.</p>
+
+<p>The most interesting presentation from a technological perspective was
+from a member of the <a href="https://slack.com">Slack</a> team, showing off their new
+project <a href="https://github.com/electron/electron-compile">Electron-Compile</a>.
+It’s a way to simplify the transpilation of source code into HTML/CSS/JS
+during development of an Electron app. Much time was spent demonstrating
+the cleverness of the team in achieving this, which I can’t reproduce here.
+It was most impressive, and definitely something I will look into using for
+my next Electron project.</p>
+
+<p>And finally, the most entertaining presentation from the presenter with the
+most flair, <a href="https://twitter.com/rauchg">Guillermo Rauch</a> basically showed
+off his nifty new Electron-based terminal emulator,
+<a href="https://github.com/zeit/hyper">Hyper.app</a> (until a recent cease &amp; desist
+known as HyperTerm). I didn’t really learn much knew, as I was already
+familiar with the project, but I was dazzled by the things he could do with
+it. I highly recommend checking out Hyper.app and playing around with it.
+I would describe it as the <a href="https://atom.io">Atom</a> of terminal emulators.</p>
+
+<h2 id="typescript">TypeScript</h2>
+
+<p>My next meetup was at Google’s SF Headquarters to learn about TypeScript,
+last year’s hot new language to transpile to JavaScript that I haven’t heard
+much on since. I have a lot less to say about this presentation, as it it
+simply wasn’t as interesting. The main thing that I learned from it is that,
+contrary to what I’d heard before, the main advantage of TypeScript is not
+avoiding type errors at runtime but actually to allow for better tooling
+(specifically better IntelliSense code-completion in Visual Studio/VS Code).
+It makes sense now why Microsoft would create and push TypeScript, as it
+seems well married to their text editors.</p>
+
+<h2 id="nodeschool-sf">NodeSchool SF</h2>
+
+<p>Finally, while not a true meetup, I attended
+<a href="http://nodeschool.io">NodeSchool</a> SF, an open workshop for learning more
+about Node.js. I attended a special workshop there on contributing to the
+Node.js core codebase. There, I found that I had a little trouble actually
+Node.js from source because on my Arch Linux installation Python 3 is named
+simply <code class="highlighter-rouge">python</code>, and the Node.js make files expect Python 2. I finally got
+around this by temporarily symlinking <code class="highlighter-rouge">python2</code> to <code class="highlighter-rouge">python</code> and overriding my
+usual <code class="highlighter-rouge">$PATH</code>. After getting it compiled, my first commit to the Node.js
+project was <a href="https://github.com/nodejs/node/commit/7f7502d901e8eb9db5213121a6b0a9d4f825d23c">a modification to the documentation regarding building it</a>.
+Just getting my feet wet, to be sure, but a satisfying feeling.</p>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>&copy;2017 - Christopher Fujino</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

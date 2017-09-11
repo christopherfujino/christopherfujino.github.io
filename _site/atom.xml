@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Monochrome | A minimal, responsive Jekyll blog theme</title>
+ <link href="http://0.0.0.0:80/atom.xml" rel="self"/>
+ <id>http://0.0.0.0:80</id>
+ <updated>2017-09-10T22:16:16-07:00</updated>
+ <author>
+   <name>The Review Index</name>
+   <uri>https://thereviewindex.com</uri>
+   <email>dyutibarma@gmail.com</email>
+ </author>
+
+ 
+
+ <entry>
+   <title>Sf.js</title>
+   <link href="http://0.0.0.0:80/sfjs"/>
+   <id>http://0.0.0.0:80/sfjs</id>
+   <updated>2016-10-13T11:32:22-07:00</updated>
+   <content type="html">&lt;p&gt;I recently went to the Bay Area to visit my brother and got a chance to go to some meetups and mingle with the local nerdfolk. Here’s a summary of the meetups I attended and what I learned:&lt;/p&gt; &lt;h2 id=&quot;electron-meetup&quot;&gt;Electron Meetup&lt;/h2&gt; &lt;p&gt;The first meetup was for the exciting new Node.js-based...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>A CSS Word-break Bug</title>
+   <link href="http://0.0.0.0:80/Word-Break-Bug"/>
+   <id>http://0.0.0.0:80/Word-Break-Bug</id>
+   <updated>2016-09-12T09:05:11-07:00</updated>
+   <content type="html">&lt;p&gt;So on &lt;a href=&quot;https://teach-me-to-code.github.io/2016/07/21/Teaching-C-To-A-JS-Developer/&quot;&gt;my last post&lt;/a&gt;, I encountered a strange bug on Chrome (but not on Firefox) where some of my text was breaking mid-word, without so much as a hyphen inserted. Here’s a screenshot:&lt;/p&gt; &lt;p&gt;I’m using &lt;a href=&quot;https://hexo.io&quot;&gt;the Hexo framework&lt;/a&gt; for my blog, along with a theme from github...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Teaching C To A JavaScript Developer</title>
+   <link href="http://0.0.0.0:80/Teaching-C-To-A-JS-Developer"/>
+   <id>http://0.0.0.0:80/Teaching-C-To-A-JS-Developer</id>
+   <updated>2016-07-21T10:52:14-07:00</updated>
+   <content type="html">&lt;p&gt;According to Douglas Crockford, &lt;a href=&quot;http://www.crockford.com/javascript/javascript.html&quot;&gt;JavaScript is the world’s most misunderstood programming language&lt;/a&gt;, and I am inclined to agree. Especially in the ’90s, I think a lot of programmers first encountered JavaScript from a C/C++ or Java background (indeed, JavaScript-inventor Brendan Eich has said that he was tasked with creating...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>ES6 Maps, Weak Maps, and the Determinism of the JavaScript Garbage Collector</title>
+   <link href="http://0.0.0.0:80/Hash-Maps-ES6-Maps-and-Weak-Maps"/>
+   <id>http://0.0.0.0:80/Hash-Maps-ES6-Maps-and-Weak-Maps</id>
+   <updated>2016-07-09T11:13:42-07:00</updated>
+   <content type="html">&lt;p&gt;Let’s say you have an app with a number of objects, and you’d like to store metadata about certain objects. How would you do this? What I’ve been doing is creating a special object for the purpose, like so:&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Git, Dotfiles, and the Dream of a Truly Cross-Platform Work Environment</title>
+   <link href="http://0.0.0.0:80/Git-Dotfiles-and-the-Dream"/>
+   <id>http://0.0.0.0:80/Git-Dotfiles-and-the-Dream</id>
+   <updated>2016-06-28T10:24:21-07:00</updated>
+   <content type="html">&lt;p&gt;So last October I started using Git to track my &lt;a href=&quot;https://github.com/christopherfujino/dotfiles&quot;&gt;dotfiles and config files&lt;/a&gt;. Although it makes sense to use version control in case you make a change that breaks your system, to me the biggest appeal of doing this was so that I could easily synchronize all my...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Hello, World!</title>
+   <link href="http://0.0.0.0:80/Hello-World"/>
+   <id>http://0.0.0.0:80/Hello-World</id>
+   <updated>2016-06-15T09:11:47-07:00</updated>
+   <content type="html">&lt;p&gt;Most programming blogs feature posts from veteran programmers teaching others new concepts and techniques. However, I am a beginning programmer and I plan to blog about the things I’m learning and the difficulties I’m having. Hopefully I can help other beginning programmers, but more importantly I hope people will get...</content>
+ </entry>
+
+ 
+
+</feed>
